@@ -1,0 +1,145 @@
+object FrameDictionary: TFrameDictionary
+  Size.Width = 482.000000000000000000
+  Size.Height = 336.000000000000000000
+  Size.PlatformDefault = False
+  object Layout1: TLayout
+    Align = Top
+    Size.Width = 482.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object cbDictionary: TComboBox
+      Align = Top
+      Items.Strings = (
+        'en'
+        'de'
+        'it')
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 22.000000000000000000
+      Size.Width = 472.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      OnChange = cbDictionaryChange
+    end
+    object Label1: TLabel
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Size.Width = 472.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Select the Source Language (This will setup available languages)'
+      TabOrder = 3
+    end
+    object memoDictionary: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      Align = Client
+      HitTest = False
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 472.000000000000000000
+      Size.Height = 0.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 472.000000000000000000
+      Viewport.Height = 0.000000000000000000
+    end
+  end
+  object loLookup: TLayout
+    Align = Client
+    Size.Width = 482.000000000000000000
+    Size.Height = 279.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object memoLookup: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      TextSettings.WordWrap = True
+      Align = Client
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 472.000000000000000000
+      Size.Height = 175.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 472.000000000000000000
+      Viewport.Height = 175.000000000000000000
+    end
+    object cbNewDictionaryLanguage: TComboBox
+      Align = Top
+      Items.Strings = (
+        'en'
+        'de'
+        'it')
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 22.000000000000000000
+      Size.Width = 472.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+    end
+    object Layout3: TLayout
+      Align = Top
+      Position.Y = 44.000000000000000000
+      Size.Width = 482.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      object edtLookup: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 0
+        Position.X = 16.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 355.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = '<Word to look up a translation for>'
+      end
+      object Button1: TButton
+        Anchors = [akTop, akRight]
+        Position.X = 383.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 83.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Lookup'
+        OnClick = Button1Click
+      end
+    end
+    object Label2: TLabel
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Size.Width = 472.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Select Available Target Language'
+      TabOrder = 3
+    end
+  end
+  object Splitter1: TSplitter
+    Align = Top
+    Cursor = crVSplit
+    MinSize = 20.000000000000000000
+    Position.Y = 49.000000000000000000
+    Size.Width = 482.000000000000000000
+    Size.Height = 8.000000000000000000
+    Size.PlatformDefault = False
+  end
+end

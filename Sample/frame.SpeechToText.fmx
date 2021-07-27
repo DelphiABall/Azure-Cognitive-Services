@@ -1,0 +1,120 @@
+object FrameSpeechToText: TFrameSpeechToText
+  Padding.Left = 5.000000000000000000
+  Padding.Right = 5.000000000000000000
+  Size.Width = 482.000000000000000000
+  Size.Height = 336.000000000000000000
+  Size.PlatformDefault = False
+  object Layout1: TLayout
+    Align = Top
+    Position.X = 5.000000000000000000
+    Position.Y = 73.000000000000000000
+    Size.Width = 472.000000000000000000
+    Size.Height = 80.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object btnConvert: TButton
+      Position.Y = 47.000000000000000000
+      Size.Width = 170.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Convert To Text (Simple)'
+      OnClick = btnConvertClick
+    end
+    object btnConvertDetailed: TButton
+      Position.X = 192.000000000000000000
+      Position.Y = 47.000000000000000000
+      Size.Width = 170.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Convert To Text (Detailed)'
+      OnClick = btnConvertClick
+    end
+    object edtCountryCode: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 3
+      Text = 'en-US'
+      Position.Y = 17.000000000000000000
+      Size.Width = 472.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label1: TLabel
+      Align = Top
+      Size.Width = 472.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Audio Language'
+      TabOrder = 0
+    end
+  end
+  object memoLog: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    TextSettings.WordWrap = True
+    Align = Client
+    Size.Width = 472.000000000000000000
+    Size.Height = 183.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Viewport.Width = 472.000000000000000000
+    Viewport.Height = 183.000000000000000000
+  end
+  object Layout2: TLayout
+    Align = Top
+    Position.X = 5.000000000000000000
+    Size.Width = 472.000000000000000000
+    Size.Height = 73.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object lblFile: TLabel
+      Align = Top
+      Size.Width = 472.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'File to convert to text'
+      TabOrder = 0
+    end
+    object edtFilePath: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 1
+      Position.Y = 17.000000000000000000
+      Size.Width = 472.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      object btnEditFilePath: TEditButton
+        CanFocus = False
+        Cursor = crArrow
+        Size.Width = 28.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'ellipseseditbutton'
+        TabOrder = 0
+        Text = '...'
+        OnClick = btnEditFilePathClick
+      end
+    end
+    object btnPlayFile: TButton
+      Position.Y = 42.000000000000000000
+      Size.Width = 121.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Play Audio File'
+      OnClick = btnPlayFileClick
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.wav'
+    Filter = 'Wave Files|*.wav|Ogg Files|*.ogg|All Files|*.*'
+    Left = 424
+    Top = 48
+  end
+  object MediaPlayer1: TMediaPlayer
+    Left = 373
+    Top = 55
+  end
+end

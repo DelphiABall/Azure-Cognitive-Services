@@ -1,0 +1,108 @@
+object FrameTranslateText: TFrameTranslateText
+  Size.Width = 534.000000000000000000
+  Size.Height = 374.000000000000000000
+  Size.PlatformDefault = False
+  object Label1: TLabel
+    Align = Top
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 2.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 2.000000000000000000
+    Size.Width = 524.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Translate:'
+    TabOrder = 4
+  end
+  object Label2: TLabel
+    Align = Top
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 2.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 53.000000000000000000
+    Size.Width = 524.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Translate To:'
+    TabOrder = 5
+  end
+  object edtText: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Top
+    TabOrder = 3
+    Text = 'Hello'
+    Position.X = 5.000000000000000000
+    Position.Y = 29.000000000000000000
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Size.Width = 524.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object cbTo: TComboBox
+    Align = Top
+    Items.Strings = (
+      'en'
+      'de'
+      'it')
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 80.000000000000000000
+    Size.Width = 524.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+  end
+  object cbTo2: TComboBox
+    Align = Top
+    Items.Strings = (
+      'en'
+      'de'
+      'it')
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 107.000000000000000000
+    Size.Width = 524.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+  end
+  object btnTranslate: TButton
+    Align = Top
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 134.000000000000000000
+    Size.Width = 524.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Translate'
+    OnClick = btnTranslateClick
+  end
+  object MemoOutput: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    TextSettings.WordWrap = True
+    Align = Client
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Size.Width = 524.000000000000000000
+    Size.Height = 195.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    Viewport.Width = 520.000000000000000000
+    Viewport.Height = 191.000000000000000000
+  end
+end
