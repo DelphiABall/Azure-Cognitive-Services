@@ -1,0 +1,156 @@
+object FrameTextToSpeech: TFrameTextToSpeech
+  Size.Width = 576.000000000000000000
+  Size.Height = 454.000000000000000000
+  Size.PlatformDefault = False
+  object Layout2: TLayout
+    Align = Top
+    Position.Y = 24.000000000000000000
+    Size.Width = 576.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object cbVoicesRegions: TComboBox
+      Align = Center
+      Size.Width = 329.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      OnChange = cbVoicesRegionsChange
+    end
+  end
+  object Label4: TLabel
+    Align = Top
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 2.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 2.000000000000000000
+    Size.Width = 566.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Voices for Region'
+    TabOrder = 2
+  end
+  object GroupBox1: TGroupBox
+    Align = Top
+    Padding.Left = 5.000000000000000000
+    Padding.Top = 25.000000000000000000
+    Padding.Right = 5.000000000000000000
+    Padding.Bottom = 5.000000000000000000
+    Position.Y = 74.000000000000000000
+    Size.Width = 576.000000000000000000
+    Size.Height = 151.000000000000000000
+    Size.PlatformDefault = False
+    Text = 
+      'Multi Voice Demo - Once you have loaded the voices for the regio' +
+      'n, try saying the Joke'
+    TabOrder = 1
+    object Layout1: TLayout
+      Align = Client
+      Padding.Left = 5.000000000000000000
+      Margins.Left = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Size.Width = 355.000000000000000000
+      Size.Height = 121.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 37
+      object edtLine1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 43
+        Text = 'Why did the Turkey cross the road?'
+        Position.X = 5.000000000000000000
+        Margins.Bottom = 3.000000000000000000
+        Size.Width = 350.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object edtLine2: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 41
+        Text = 'I don'#39't know, why did the Turkey cross the road?'
+        Position.X = 5.000000000000000000
+        Position.Y = 25.000000000000000000
+        Margins.Bottom = 3.000000000000000000
+        Size.Width = 350.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object edtLine3: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 42
+        Text = 'Because the chicken was self isolating'
+        Position.X = 5.000000000000000000
+        Position.Y = 50.000000000000000000
+        Margins.Bottom = 3.000000000000000000
+        Size.Width = 350.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object btnJoke: TButton
+        Align = Center
+        Size.Width = 104.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 44
+        Text = 'Say Joke'
+        OnClick = btnJokeClick
+      end
+    end
+    object Layout3: TLayout
+      Align = Left
+      Margins.Right = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 25.000000000000000000
+      Size.Width = 196.000000000000000000
+      Size.Height = 121.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 38
+      object cbVoice1: TComboBox
+        Align = Top
+        Margins.Bottom = 3.000000000000000000
+        Size.Width = 196.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 40
+        OnChange = cbVoice1Change
+      end
+      object cbVoice2: TComboBox
+        Align = Top
+        Margins.Bottom = 3.000000000000000000
+        Position.Y = 25.000000000000000000
+        Size.Width = 196.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 38
+      end
+      object cbVoice3: TComboBox
+        Align = Top
+        Margins.Bottom = 3.000000000000000000
+        Position.Y = 50.000000000000000000
+        Size.Width = 196.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 39
+      end
+    end
+  end
+  object MemoLog: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    TextSettings.WordWrap = True
+    Align = Client
+    Size.Width = 576.000000000000000000
+    Size.Height = 229.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Viewport.Width = 576.000000000000000000
+    Viewport.Height = 229.000000000000000000
+  end
+  object MediaPlayer1: TMediaPlayer
+    Left = 64
+    Top = 249
+  end
+end

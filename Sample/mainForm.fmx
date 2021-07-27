@@ -1,0 +1,550 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 507
+  ClientWidth = 593
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object ToolBar1: TToolBar
+    Size.Width = 593.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object btnMenu: TButton
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'detailstoolbutton'
+      TabOrder = 0
+      Text = ' Menu'
+    end
+  end
+  object loMain: TLayout
+    Align = Client
+    Size.Width = 593.000000000000000000
+    Size.Height = 467.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object tcMain: TTabControl
+      Align = Client
+      Size.Width = 593.000000000000000000
+      Size.Height = 467.000000000000000000
+      Size.PlatformDefault = False
+      TabIndex = 4
+      TabOrder = 0
+      TabPosition = PlatformDefault
+      OnChange = tcMainChange
+      Sizes = (
+        593s
+        441s
+        593s
+        441s
+        593s
+        441s
+        593s
+        441s
+        593s
+        441s)
+      object tabOverview: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 69.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Overview'
+        ExplicitSize.cx = 69.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object lblWelcome: TLabel
+          Align = MostTop
+          StyledSettings = [Family, Size, FontColor]
+          Size.Width = 593.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.HorzAlign = Center
+          Text = 'Welcome to the Azure Cognitive Services Demo. '
+          TabOrder = 3
+        end
+        object Label1: TLabel
+          Align = MostTop
+          AutoSize = True
+          StyledSettings = [Family, Size, FontColor]
+          Margins.Left = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 97.000000000000000000
+          Size.Width = 583.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.HorzAlign = Center
+          Text = 'Azure Portal : https://portal.azure.com/'
+          TabOrder = 2
+        end
+        object Label2: TLabel
+          Align = MostTop
+          AutoSize = True
+          Margins.Left = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 41.000000000000000000
+          Size.Width = 583.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          Text = 
+            'This demo provides base classes and examples for working with th' +
+            'e Azure Cloud Cognitive Services.  To run this demo, you will ne' +
+            'ed to have a subscription create on the Azure Cloud for the serv' +
+            'ices listed below. You can create a free tier account. Any cost ' +
+            'related to these services are your responsibility. '
+          TabOrder = 0
+        end
+        object Label3: TLabel
+          Align = MostTop
+          AutoSize = True
+          Margins.Left = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 121.000000000000000000
+          Size.Width = 583.000000000000000000
+          Size.Height = 64.000000000000000000
+          Size.PlatformDefault = False
+          Text = 
+            'Once you have created a subscription in the Azure portal, you ca' +
+            'n then add "Resources" that your subscription uses.  The two Cog' +
+            'nitive Services services covered by this demo are "Translator" a' +
+            'nd "Speech Services". Once you have added the specific resource,' +
+            ' select it and view "Keys and Endpoints" to locate the Key. You ' +
+            'can use either Key 1 or Key 2.'
+          TabOrder = 1
+        end
+        inline frameAccessKeyTranslator: TframeAccessKey
+          Align = Top
+          Position.Y = 193.000000000000000000
+          Size.Width = 593.000000000000000000
+          Size.Height = 97.000000000000000000
+          Size.PlatformDefault = False
+          inherited btnTest: TButton
+            Position.X = 519.000000000000000000
+          end
+          inherited edtKey: TEdit
+            Size.Width = 489.000000000000000000
+          end
+          inherited cbRegion: TComboBox
+            Size.Width = 489.000000000000000000
+            inherited lblAccessKey: TLabel
+              Text = 'Key - Translator'
+            end
+          end
+        end
+        inline frameAccessKeySpeech: TframeAccessKey
+          Align = Top
+          Position.Y = 290.000000000000000000
+          Size.Width = 593.000000000000000000
+          Size.Height = 97.000000000000000000
+          Size.PlatformDefault = False
+          inherited btnTest: TButton
+            Position.X = 519.000000000000000000
+          end
+          inherited edtKey: TEdit
+            Size.Width = 495.000000000000000000
+          end
+          inherited cbRegion: TComboBox
+            Size.Width = 495.000000000000000000
+            inherited lblAccessKey: TLabel
+              Text = 'Key - Speech Services'
+            end
+          end
+        end
+      end
+      object tabTranslator: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 72.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Translator'
+        ExplicitSize.cx = 72.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object Label5: TLabel
+          Align = MostTop
+          StyledSettings = [Family, Size, FontColor]
+          Size.Width = 593.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.HorzAlign = Center
+          Text = 'Azure Cognitive Services - Text Translation'
+          TabOrder = 3
+        end
+        object Label6: TLabel
+          Align = MostTop
+          AutoSize = True
+          Margins.Left = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 41.000000000000000000
+          Size.Width = 583.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = 
+            'Translator - The Translator Service allows you to detect a langu' +
+            'age from text and to convert text from one language to another (' +
+            'or multiple languages)'
+          TabOrder = 0
+        end
+        inline FrameTranslateText1: TFrameTranslateText
+          Align = Client
+          Size.Width = 593.000000000000000000
+          Size.Height = 360.000000000000000000
+          Size.PlatformDefault = False
+          inherited Label1: TLabel
+            Size.Width = 583.000000000000000000
+          end
+          inherited Label2: TLabel
+            Size.Width = 583.000000000000000000
+          end
+          inherited edtText: TEdit
+            Size.Width = 583.000000000000000000
+          end
+          inherited cbTo: TComboBox
+            Size.Width = 583.000000000000000000
+          end
+          inherited cbTo2: TComboBox
+            Size.Width = 583.000000000000000000
+          end
+          inherited btnTranslate: TButton
+            Size.Width = 583.000000000000000000
+          end
+          inherited MemoOutput: TMemo
+            Size.Width = 583.000000000000000000
+            Size.Height = 181.000000000000000000
+            TabOrder = 7
+            Viewport.Width = 583.000000000000000000
+            Viewport.Height = 181.000000000000000000
+          end
+        end
+      end
+      object tabDictionary: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 74.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Dictionary'
+        ExplicitSize.cx = 74.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        inline FrameDictionary1: TFrameDictionary
+          Align = Client
+          Size.Width = 593.000000000000000000
+          Size.Height = 360.000000000000000000
+          Size.PlatformDefault = False
+          inherited Layout1: TLayout
+            Size.Width = 593.000000000000000000
+            inherited cbDictionary: TComboBox
+              Size.Width = 583.000000000000000000
+            end
+            inherited Label1: TLabel
+              Size.Width = 583.000000000000000000
+              Text = 'Select the Source Language'
+              TabOrder = 2
+            end
+            inherited memoDictionary: TMemo
+              Size.Width = 583.000000000000000000
+              Viewport.Width = 583.000000000000000000
+              Viewport.Height = 0.000000000000000000
+            end
+          end
+          inherited loLookup: TLayout
+            Size.Width = 593.000000000000000000
+            Size.Height = 303.000000000000000000
+            inherited memoLookup: TMemo
+              Size.Width = 583.000000000000000000
+              Size.Height = 199.000000000000000000
+              Viewport.Width = 583.000000000000000000
+              Viewport.Height = 199.000000000000000000
+            end
+            inherited cbNewDictionaryLanguage: TComboBox
+              Size.Width = 583.000000000000000000
+            end
+            inherited Layout3: TLayout
+              Size.Width = 593.000000000000000000
+              TabOrder = 3
+              inherited edtLookup: TEdit
+                Size.Width = 466.000000000000000000
+              end
+              inherited Button1: TButton
+                Position.X = 494.000000000000000000
+              end
+            end
+            inherited Label2: TLabel
+              Size.Width = 583.000000000000000000
+              TabOrder = 2
+            end
+          end
+          inherited Splitter1: TSplitter
+            Size.Width = 593.000000000000000000
+          end
+        end
+        object Label7: TLabel
+          Align = MostTop
+          StyledSettings = [Family, Size, FontColor]
+          Size.Width = 593.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.HorzAlign = Center
+          Text = 'Azure Cognitive Services - Text Dictionary'
+          TabOrder = 10
+        end
+        object Label8: TLabel
+          Align = MostTop
+          AutoSize = True
+          Margins.Left = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 41.000000000000000000
+          Size.Width = 583.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = 
+            'Translator - The Dictionary allows you to look up translations i' +
+            'n dictionary. This is not available for all languages. A summary' +
+            ' of the API call to find out the options for a language is shown' +
+            ' in the memo.'
+          TabOrder = 0
+        end
+      end
+      object tabTextToSpeech: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 98.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Text To Speech'
+        ExplicitSize.cx = 98.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object Label9: TLabel
+          Align = MostTop
+          StyledSettings = [Family, Size, FontColor]
+          Size.Width = 593.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.HorzAlign = Center
+          Text = 'Azure Cognitive Services - Text To Speech'
+          TabOrder = 5
+        end
+        object Label10: TLabel
+          Align = MostTop
+          AutoSize = True
+          Margins.Left = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 41.000000000000000000
+          Size.Width = 583.000000000000000000
+          Size.Height = 64.000000000000000000
+          Size.PlatformDefault = False
+          Text = 
+            'Speech - The Speech service enables text to be coverted into aud' +
+            'io. You can send in single voice, or an array of text with diffe' +
+            'rent voices. The voices available are defined by the region your' +
+            ' service is connected to. The first call provides those voices, ' +
+            'ready for use. "Say Joke" shows an example of parsing more than ' +
+            'standard text with TAzureTextBuilder, which creates a SSML marku' +
+            'p document'
+          TabOrder = 0
+        end
+        inline FrameTextToSpeech1: TFrameTextToSpeech
+          Align = Client
+          Size.Width = 593.000000000000000000
+          Size.Height = 328.000000000000000000
+          Size.PlatformDefault = False
+          inherited Layout2: TLayout
+            Size.Width = 593.000000000000000000
+          end
+          inherited Label4: TLabel
+            Size.Width = 583.000000000000000000
+          end
+          inherited GroupBox1: TGroupBox
+            Size.Width = 593.000000000000000000
+            inherited Layout1: TLayout
+              Size.Width = 372.000000000000000000
+              TabOrder = 38
+              inherited edtLine1: TEdit
+                Size.Width = 367.000000000000000000
+              end
+              inherited edtLine2: TEdit
+                Size.Width = 367.000000000000000000
+              end
+              inherited edtLine3: TEdit
+                Size.Width = 367.000000000000000000
+              end
+            end
+            inherited Layout3: TLayout
+              TabOrder = 37
+            end
+          end
+          inherited MemoLog: TMemo
+            Size.Width = 593.000000000000000000
+            Size.Height = 103.000000000000000000
+            Viewport.Width = 593.000000000000000000
+            Viewport.Height = 103.000000000000000000
+          end
+        end
+      end
+      object tabSpeechToText: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = True
+        Size.Width = 98.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Speech To Text'
+        ExplicitSize.cx = 98.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object Label11: TLabel
+          Align = MostTop
+          StyledSettings = [Family, Size, FontColor]
+          Size.Width = 593.000000000000000000
+          Size.Height = 41.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.HorzAlign = Center
+          Text = 'Azure Cognitive Services - Speech To Text'
+          TabOrder = 5
+        end
+        object Label12: TLabel
+          Align = MostTop
+          AutoSize = True
+          Margins.Left = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 41.000000000000000000
+          Size.Width = 583.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Speech - Converts WAV or OGG files into Text'
+          TabOrder = 0
+        end
+        inline FrameSpeechToText1: TFrameSpeechToText
+          Align = Client
+          Padding.Left = 5.000000000000000000
+          Padding.Right = 5.000000000000000000
+          Size.Width = 593.000000000000000000
+          Size.Height = 376.000000000000000000
+          Size.PlatformDefault = False
+          inherited Layout1: TLayout
+            Size.Width = 583.000000000000000000
+            inherited edtCountryCode: TEdit
+              Size.Width = 583.000000000000000000
+            end
+            inherited Label1: TLabel
+              Size.Width = 583.000000000000000000
+            end
+          end
+          inherited memoLog: TMemo
+            Size.Width = 583.000000000000000000
+            Size.Height = 223.000000000000000000
+            Viewport.Width = 579.000000000000000000
+            Viewport.Height = 219.000000000000000000
+          end
+          inherited Layout2: TLayout
+            Size.Width = 583.000000000000000000
+            inherited lblFile: TLabel
+              Size.Width = 583.000000000000000000
+            end
+            inherited edtFilePath: TEdit
+              Size.Width = 583.000000000000000000
+            end
+            inherited btnPlayFile: TButton
+              Position.X = 8.000000000000000000
+            end
+          end
+        end
+      end
+    end
+  end
+  object MultiView1: TMultiView
+    TargetControl = loMain
+    PopoverOptions.StyleLookup = ''
+    PopoverOptions.TintColor = claPowderblue
+    MasterButton = btnMenu
+    Mode = Drawer
+    Size.Width = 185.000000000000000000
+    Size.Height = 467.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    TabOrder = 1
+    object Label4: TLabel
+      Align = Top
+      AutoSize = True
+      Size.Width = 185.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'listboxheaderlabel'
+      Text = 'Configuration'
+      TabOrder = 1
+    end
+    object btnSaveConfig: TButton
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 67.000000000000000000
+      Size.Width = 175.000000000000000000
+      Size.Height = 31.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Save'
+      OnClick = btnSaveConfigClick
+    end
+    object btnLoadConfig: TButton
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 31.000000000000000000
+      Size.Width = 175.000000000000000000
+      Size.Height = 31.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Load'
+      OnClick = btnLoadConfigClick
+    end
+  end
+end
