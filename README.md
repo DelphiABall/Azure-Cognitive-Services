@@ -14,16 +14,19 @@ In the source directory you will find units following the convension of Azure.AP
   
 ## Example/Sample
 The Samples folder includes an example written in Delphi (tested on 10.4.2).
-Each part of the functionality is delivered via seperate frames. 
+Each part of the functionality is demoed via seperate frames linking to the core API files. 
 To help with the testing and evaluation, the sample has a menu to save / auto load your API Key and Region once you have added them when running.
-The sample also includes audio.wav that you can use to see the SpeechToText methods working.
+The sample also includes audio.wav that you can use to see the SpeechToText methods working. (when you run the sample for the first time you will see a build script message, allowing this to run copies the audio.wav to the root folder so the application can find the file)
 
 ## Prerequisite
 Azure Cognitive Services are grouped into different capabilities/services that are accessed via instances with access keys.
   
 To use these classes you need to first get an Azure Cognitive Services subscription for the  
 You can get a free account for accessing the Azure portal at https://azure.microsoft.com/
-
+  
+The following steps are included in this video. 
+https://www.youtube.com/watch?v=XvUvGPl4BMA
+  
 Once you have logged into the Azure Portal, you need to "create a resource" for 
   * Translator 
   * Speech
