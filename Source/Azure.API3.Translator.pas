@@ -74,7 +74,7 @@ begin
   AccessToken.Token.AssignTokenToRequest(RESTRequest);
   Assert (RESTRequest.Params.IndexOf('Authorization') > -1,'Authorization Paramater missing');
 
-  var Param := RESTRequest.Params.AddHeader('Content-Type',TRESTContentType.ctAPPLICATION_JSON);
+  var Param := RESTRequest.Params.AddHeader('Content-Type',CONTENTTYPE_APPLICATION_JSON);
   Param.Options := [TRESTRequestParameterOption.poDoNotEncode];
 
   RESTRequest.Body.JSONWriter.WriteStartArray;
