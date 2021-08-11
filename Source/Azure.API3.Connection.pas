@@ -249,14 +249,14 @@ end;
 constructor TAzureTransportBase.Create(AOwner: TComponent);
 begin
   FRESTClient := TRESTClient.Create(Self);
-  FRestClient.ContentType := TRESTContentType.ctAPPLICATION_JSON;
+  FRestClient.ContentType := CONTENTTYPE_APPLICATION_JSON;
   FRestClient.Accept := 'application/json, text/plain; q=0.9, text/html;q=0.8,';
   FRestClient.AcceptCharset :=  'utf-8, *;q=0.8';
   FRestClient.HandleRedirects := True;
   FRestClient.RaiseExceptionOn500 := False;
 
   FRESTResponse := TRESTResponse.Create(Self);
-  FRESTResponse.ContentType := TRESTContentType.ctAPPLICATION_JSON;
+  FRESTResponse.ContentType := CONTENTTYPE_APPLICATION_JSON;
 
   FRESTRequest := TRESTRequest.Create(Self);
   FRESTRequest.Response := FRESTResponse;
