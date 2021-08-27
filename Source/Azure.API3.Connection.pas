@@ -149,6 +149,7 @@ begin
   begin
     Assert(SubscriptionKey > '', 'Subscription Key is missing');
     try
+	  RESTRequest.AddAuthParameter (‘Ocp-Apim-Subscription-Key’, SubscriptionKey, pkHTTPHEADER);
       RESTRequest.Execute;
     except
       raise exception.Create('Invalid Region or Subscription Key');
