@@ -37,5 +37,5 @@ For each Azure resource, select it from the home page and then:
   * Make note of the Location/Region
   * Run the app, and add the Key & set the region for the Service (and then choose Save from the menu if you want to avoid adding it next time you run)
   
-If you don't have RAD Studio/Delphi you can download the trial from https://www.embarcadero.com/products/rad-studio/ or the community edition from  https://www.embarcadero.com/products/delphi/starter/free-download 
-  
+If you don't have RAD Studio/Delphi you can download the trial from https://www.embarcadero.com/products/rad-studio/ or the community edition from  https://www.embarcadero.com/products/delphi/starter/free-download
+
