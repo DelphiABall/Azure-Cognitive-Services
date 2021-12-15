@@ -249,6 +249,8 @@ end;
 
 constructor TAzureTransportBase.Create(AOwner: TComponent);
 begin
+  inherited Create(AOwner);
+
   FRESTClient := TRESTClient.Create(Self);
   FRestClient.ContentType := CONTENTTYPE_APPLICATION_JSON;
   FRestClient.Accept := 'application/json, text/plain; q=0.9, text/html;q=0.8,';
