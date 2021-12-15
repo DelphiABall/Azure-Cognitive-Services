@@ -131,6 +131,7 @@ begin
 
   RRP := RESTRequest.Params.AddItem;
   RRP.name  := 'subscription-key';
+  RRP.Kind := TRESTRequestParameterKind.pkQUERY;
 
   RESTRequest.Resource := 'issuetoken';
   RESTRequest.SynchronizedEvents := False;
