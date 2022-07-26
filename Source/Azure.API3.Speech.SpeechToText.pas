@@ -97,7 +97,7 @@ begin
   Assert(AInputStream <> nil,'Invalid Stream');
 
   if AInputStream is TStringStream then begin
-    RESTRequest.Body.JSONWriter.WriteRaw(TStringStream(AInputStream).DataString);
+    RESTRequest.AddBody(AInputStream, 'audio/wave');
   end
   else begin
   var SS := TStringStream.Create('');
