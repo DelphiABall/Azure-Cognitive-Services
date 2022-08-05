@@ -97,7 +97,7 @@ begin
   Assert(AInputStream <> nil,'Invalid Stream');
 
   if AInputStream is TStringStream then begin
-    RESTRequest.AddBody(AInputStream, 'audio/wave');
+    RESTRequest.AddBody(AInputStream, TRestContentType.ctAUDIO_VND_WAVE);
   end
   else begin
   var SS := TStringStream.Create('');
